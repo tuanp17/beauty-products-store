@@ -1,5 +1,8 @@
 /**** header navaigation bar ****/
+
 body {
+  font-family: 'PT Serif', serif;
+  background-color: floralwhite;
   padding-top: 65px;
 }
 a:link {
@@ -20,3 +23,5 @@ a:link {
   color: #fff !important;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.39);
   -webkit-font-smoothing: antialiased;
+}
+/*** Logo and icon ***/
