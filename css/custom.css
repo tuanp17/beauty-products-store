@@ -1,4 +1,7 @@
 /**** header navaigation bar ****/
+body {
+  padding-top: 65px;
+}
 a:link {
     text-decoration: none;
 }
