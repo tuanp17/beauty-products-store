@@ -10,36 +10,57 @@
   </head>
   <body>
     <!-- Nav Bar -->
-    <nav class="navbar navbar-default" role="navigation">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">VY VY Boutique</a>
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">VY VY Boutique</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class = "nav nav navbar-nav navbar-right">
+            <li class="active">
+              <!-- cart shopping
+              <a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>Giỏ Hàng<span class="badge">0</span></a>
+              -->
+              <a href="#">Trang Chủ</a>
+            </li>
+            <li>
+              <!-- sign up button 
+              <button type="button" class="btn btn-custom-juliet navbar-btn">Đăng Kí</button>
+              -->
+              <a href="#">Chăm Sóc Da Mặt</a>
+            </li>
+            <li>
+              <!-- sign up button
+              <button type="button" class="btn btn-success navbar-btn">Đăng Nhập</button>
+              -->
+              <a href="#">Chăm Sóc Cơ Thể</a>
+            </li>
+            <li><a href="#">Phản Hồi</a></li>
+            <li><a href="#">Thanh Toán</a></li>
+            <li><a href="#">Tư Vấn</a></li>
+            <li><a href="#">Liên hệ</a></li>
+          </ul>
+          <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Tên sản phẩm">
+            </div>
+            <button type="submit" class="btn btn-custom-juliet center-block">Tìm Kiếm</button>
+          </form>
+        </div>
       </div>
     </nav>
     <!-- End Nav Bar -->
-    <!--Nav Bar-->
+
+
+    <!-- Carousel -->
     <div class = "container">
-      <header class = "page-header">
-        <ul class = "nav nav-pills pull-right hidden-xs">
-          <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>Giỏ Hàng<span class="badge">0</span></a></li>
-          <li><button type="button" class="btn btn-custom-juliet navbar-btn pull-right">Đăng Kí</button></li>
-          <li><button type="button" class="btn btn-success navbar-btn pull-right">Đăng Nhập</button></li>
-        </ul>
-        <form class="navbar-form navbar-right hidden-xs" role="search">
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Tên sản phẩm">
-          </div>
-          <button type="submit" class="btn btn-primary">Tìm Kiếm</button>
-        </form>
-        <h3 class ="hidden-xs"><a href ="#">VY VY Boutique</a></h3>
-
-        <!--Nav Bar for small screen -mobile-->
-        <div class = "visible-xs">
-          <h2 class = "text-center"><a href="#">VY VY Boutique</a></h2>
-        </div>
-      </header>
-      <!--End Nav Bar-->
-
-      <!-- Carousel -->
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li class="active" data-target="#myCarousel" data-slide-to="0"></li>
@@ -65,9 +86,10 @@
           <span class="icon-next"></span>
         </a>
       </div>
-      
+    </div>
+    
 
-      <!-- End Carousel -->
+    <!-- End Carousel -->
     </div> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
