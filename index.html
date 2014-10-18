@@ -14,17 +14,19 @@
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
+        <div class="navbar-header">    
+          <a class="navbar-brand" href="index.html"><strong>VY VY Boutique</strong></a>   
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html"><strong>VY VY Boutique</strong></a>
+          
+
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class = "nav navbar-nav nav-pills navbar-right">
+          <ul class = "nav navbar-nav navbar-right">
             <li class="active">
               <!-- cart shopping
               <a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>Giỏ Hàng<span class="badge">0</span></a>
@@ -47,14 +49,17 @@
             <li><a href="#"><strong>Thanh Toán</strong></a></li>
             <li><a href="#"><strong>Tư Vấn</strong></a></li>
             <li><a href="#"><strong>Liên hệ</strong></a></li>
+            <li>
+              <form class="navbar-form" role="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Tên sản phẩm">
+                </div>
+                <button type="submit" class="btn btn-custom-echo hidden-xs">Tìm Kiếm</button>
+                <button type="submit" class="btn btn-custom-echo visible-xs center-block">Tìm Kiếm</button>
+              </form>
+            </li>
           </ul>
-          <form class="navbar-form navbar-left" role="search">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Tên sản phẩm">
-            </div>
-            <button type="submit" class="btn btn-custom-echo hidden-xs">Tìm Kiếm</button>
-            <button type="submit" class="btn btn-custom-echo visible-xs center-block">Tìm Kiếm</button>
-          </form>
+          
         </div>
       </div>
     </nav>
@@ -164,12 +169,12 @@
     <footer class = "main-footer">
       <div class ="container">
         <div class = "row footer">
-          <div class="col-sm-4 hidden-xs">
-            <h4><a href="#">VY VY Boutique</a></h4>
+          <div class="col-sm-4">
+            <h4><a href="index.html">VY VY Boutique</a></h4>
             <p><a href ="#"><img src = "img/location.png" alt = "location">7 Phan Chu Trinh </br> Nha Trang, Khánh Hòa</a></p>
             <p>&copy; 2014 VyVyBoutique</p>
           </div>
-          <div class="col-md-4 hidden-xs">
+          <div class="col-md-4">
             <ul class="footer-nav">
               <li><a href="#">Trang Chủ</a></li>
               <li class ="dropdown">
@@ -182,15 +187,15 @@
               <li><a href="#">Tư Vấn</a></li>
             </ul>
           </div>
-          <div class="col-md-4 hidden-xs">
-            <ul class="footer-nav">
+          <div class="col-md-4">
+            <ul class="footer-nav-icon">
               <li><a href="#"><img src="img/facebook.png" alt="facebook-logo"></a></li>
               <li><a href="#"><img src="img/envelope.png" alt="mail-logo"></a></li>
               <li><a href="#"><img src="img/phone.png" alt="phone-logo"></a></li>
             </ul>
           </div>
 
-          <!-- Footer for small screen -->
+          <!-- Footer for small screen --
           <div class = "col-md-6 footer-small-screen-nav pull-right visible-xs">
             <ul class="footer-nav">
               <li><a href="#"><img src="img/facebook.png" alt="facebook-logo"></a></li>
