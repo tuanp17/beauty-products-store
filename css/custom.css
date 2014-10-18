@@ -27,11 +27,19 @@ body {
   padding-right: 17px;
 }
 
+.footer-nav-icon > li {
+  display: inline;
+  padding-right: 17px;
+}
 .footer-small-screen-nav ul {
   padding-top: 15px;
 }
 .footer-small-screen p{
   color: #a6afb2;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
 
 /**** header navaigation bar ****/
@@ -82,6 +90,7 @@ a:link {
   margin-top: 20px;
 }
 /*** End Thumbnail slider ***/
+
 .btn-custom-juliet {
   background-color: hsl(41, 85%, 35%) !important;
   background-repeat: repeat-x;
@@ -119,7 +128,37 @@ a:link {
 /*** End Logo and Icon ***/
 
 /*** Media Queris ***/
-@media(min-width: 762px) and (max-width:1261px){
+@media (max-width: 1235px) {
+  .navbar-header {
+      float: none;
+  }
+  .navbar-toggle {
+      display: block;
+  }
+  .navbar-collapse {
+      border-top: 1px solid transparent;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .navbar-collapse.collapse {
+      display: none!important;
+  }
+  .navbar-collapse.collapse.in {
+      display: block!important;
+  }
+  .navbar-nav {
+      float: none!important;
+      margin: 7.5px -15px;
+  }
+  .navbar-nav>li {
+      float: none;
+  }
+  .navbar-nav>li>a {
+      padding-top: 10px;
+      padding-bottom: 10px;
+  }
+}
+
+@media (max-width: 991px) {
   
 }
 /*** End Media Queries ***/
