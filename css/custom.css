@@ -8,6 +8,7 @@ body {
 ul {
   list-style: none;
 }
+
 .panel-title {
   color: #0A9B25;
 }
@@ -51,9 +52,11 @@ ul {
   padding-right: 17px;
 }
 
+/** dropdown hover
 .dropdown:hover .dropdown-menu {
   display: block;
 }
+**/
 /*** End footer ***/
 
 /**** header navaigation bar ****/
@@ -142,7 +145,7 @@ a:link {
 /*** End Logo and Icon ***/
 
 /*** Media Queris ***/
-@media (max-width: 1235px) {
+@media (max-width: 1064px) {
   .navbar-header {
       float: none;
   }
@@ -170,6 +173,17 @@ a:link {
       padding-top: 10px;
       padding-bottom: 10px;
   }
+
+  .navbar-nav .open .dropdown-menu {
+    float: none;
+    position: static;
+    width: auto;
+    margin-top: 0;
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+
 }
 
 @media (max-width: 991px) {
