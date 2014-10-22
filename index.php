@@ -2,7 +2,6 @@
     <!-- Content -->
     <!-- first-carousel-content -->
     <div class="container">
-      <hr>
       <div class="panel panel-success panel-custom">
         <div class="panel-heading">
           <h3 class="panel-title"><img src="img/thumbs-up.png" alt="popular-products-logo">&nbsp;&nbsp;Sản Phẩm Nổi Bật
