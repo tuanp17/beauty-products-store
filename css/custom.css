@@ -3,12 +3,14 @@
 body {
   font-family: 'PT Serif', serif;
   background-color: floralwhite;
-  padding-top: 65px;
 }
 ul {
   list-style: none;
 }
 
+.navbar-nav li {
+  padding-right: 7px;
+}
 .panel-title {
   color: #0A9B25;
 }
@@ -62,6 +64,7 @@ ul {
 /**** header navaigation bar ****/
 a:link {
     text-decoration: none;
+    color: #000000;
 }
 
 /*** Thumbnail slider ***/
@@ -108,6 +111,11 @@ a:link {
 }
 /*** End Thumbnail slider ***/
 
+/*** Buttons ***/
+.btn-custom {background: rgba(18, 179, 58, 0.85); border-color: rgba(204, 204, 204, 1); color: rgba(51, 51, 51, 1); font-size: 14px; border-radius: 4px; border-width: 1px;}
+.btn-custom:hover {background: rgba(25, 194, 48, 0.77); border-color: rgba(173, 173, 173, 1); color: rgba(51, 51, 51, 1);}
+.btn-custom:active, .btn-custom:focus {background: rgba(235, 235, 235, 1); border-color: rgba(173, 173, 173, 1); color: rgba(51, 51, 51, 1);}
+
 .btn-custom-juliet {
   background-color: hsl(41, 85%, 35%) !important;
   background-repeat: repeat-x;
@@ -141,10 +149,45 @@ a:link {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.52);
   -webkit-font-smoothing: antialiased;
 }
+/*** End buttons ***/
+
 /*** Logo and icon ***/
 /*** End Logo and Icon ***/
 
-/*** Media Queris ***/
+/*** Contact Page ***/
+.breadcrumb {background: rgba(245, 245, 245, 0.24); border: 1px solid rgba(245, 245, 245, 1); border-radius: 4px; display: block;}
+.breadcrumb li {font-size: 15px;}
+.breadcrumb a {color: rgba(60, 176, 25, 1);}
+.breadcrumb a:hover {color: rgba(13, 117, 42, 1);}
+.breadcrumb>.active {color: rgba(148, 132, 132, 1);}
+.breadcrumb>li+li:before {color: rgba(26, 79, 140, 1); content: "\203A\00a0";}
+
+.verticalLine {
+    border-right: solid #C0C0C0;
+    border-width: 1px;
+}
+
+.panel-contact a{
+  color: #0A9B25;
+}
+
+.panel-contact a:hover {
+  color: #0A681A;
+  text-decoration: underline;
+}
+
+.icon-bar-contact li {
+  display: inline;
+}
+
+.icon-bar-contact img {
+  padding-top: 10px;
+  padding-right: 7px;
+}
+/*** End Contact Page ***/
+
+
+/*** Media Queris ***
 @media (max-width: 1064px) {
   .navbar-header {
       float: none;
@@ -174,6 +217,8 @@ a:link {
       padding-bottom: 10px;
   }
 
+
+
   .navbar-nav .open .dropdown-menu {
     float: none;
     position: static;
@@ -184,9 +229,5 @@ a:link {
     box-shadow: none;
   }
 
-}
-
-@media (max-width: 991px) {
-  
 }
 /*** End Media Queries ***/
