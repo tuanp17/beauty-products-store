@@ -9,7 +9,7 @@ include("inc/header.php");
       <div class="panel panel-success panel-custom">
         <div class="panel-heading">
           <h3 class="panel-title"><img src="img/thumbs-up.png" alt="popular-products-logo">&nbsp;&nbsp;Sản Phẩm Nổi Bật
-            <p class="pull-right"><a href="#">Xem thêm&nbsp;<img src="img/forward.png" alt="forward-icon">
+            <p class="pull-right"><a href="popular_products.php">Xem thêm&nbsp;<img src="img/forward.png" alt="forward-icon">
             </a></p>
           </h3>
           
@@ -71,7 +71,7 @@ include("inc/header.php");
       <div class="panel panel-success panel-custom">
         <div class="panel-heading">
           <h3 class="panel-title"><img src="img/star.png" alt="newest-products-logo">&nbsp;&nbsp;Sản Phẩm Mới Nhất
-            <p class="pull-right"><a href="#">Xem thêm&nbsp;<img src="img/forward.png" alt="forward-icon">
+            <p class="pull-right"><a href="newest_products.php">Xem thêm&nbsp;<img src="img/forward.png" alt="forward-icon">
             </a></p>
           </h3>
           
