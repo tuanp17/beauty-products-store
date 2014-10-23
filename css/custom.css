@@ -7,7 +7,13 @@ body {
 ul {
   list-style: none;
 }
-
+.navbar-brand {
+  color: 
+}
+.navigation-link a {
+  display: block;
+  color: #707070;
+}
 .navbar-nav li {
   padding-right: 7px;
 }
@@ -63,8 +69,7 @@ ul {
 
 /**** header navaigation bar ****/
 a:link {
-    text-decoration: none;
-    color: #000000;
+  text-decoration: none;  
 }
 
 /*** Thumbnail slider ***/
@@ -161,11 +166,6 @@ a:link {
 .breadcrumb a:hover {color: rgba(13, 117, 42, 1);}
 .breadcrumb>.active {color: rgba(148, 132, 132, 1);}
 .breadcrumb>li+li:before {color: rgba(26, 79, 140, 1); content: "\203A\00a0";}
-
-.verticalLine {
-    border-right: solid #C0C0C0;
-    border-width: 1px;
-}
 
 .panel-contact a{
   color: #0A9B25;
