@@ -65,7 +65,9 @@ include("inc/header.php");
 			  		//else -> show the form.
 			  		//isset: check the variable exists or not
 			 			if (isset($_GET["status"]) and $_GET["status"] == "thanks") { ?>
-			 				
+			 				<div class="alert alert-warning" role="alert">
+			 					<p>Cảm ơn $name đã giúp đỡ và hoàn thiện VYVY Boutique</p>
+			 				</div>
 			 			<?php } else { ?>
 				 			<form class="form-horizontal" role="form" method="post" action="contact.php">
 				 				<div class="form-group">
