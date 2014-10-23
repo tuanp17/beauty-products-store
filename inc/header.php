@@ -85,10 +85,14 @@
                 <a href="index.php"><img src="img/home.png" alt="home-icon">&nbsp;<strong>Trang Chủ</strong></a>
               </li>
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="img/shopping-cart.png" alt="cart-icon">&nbsp;<strong>Mỹ Phẩm&nbsp;</strong><span class="caret"></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <img src="img/shopping-cart.png" alt="cart-icon">&nbsp;<strong>Chăm Sóc&nbsp;</strong><span class="caret"></span>
+                </a>
                 <ul class="dropdown-menu" role="menu">
-                  <li><a href="#"><strong>Dành Cho Da Mặt</strong></a></li>
-                  <li><a href="#"><strong>Dành Cho Body</strong></a></li>
+                  <li><a href="popular_products.php"><strong>Nổi Bật</strong></a></li>
+                  <li><a href="newest_products.php"><strong>Mới Nhất</strong></a></li>
+                  <li><a href="face_products.php"><strong>Dành Cho Da Mặt</strong></a></li>
+                  <li><a href="body_products.php"><strong>Dành Cho Body</strong></a></li>
                 </ul>
               </li>
               <li><a href="#"><img src="img/star-half-empty.png">&nbsp;<strong>Phản Hồi</strong></a></li>
