@@ -1,3 +1,4 @@
+<?php include('inc/popular_products_inc.php'); ?>
 <?php
 	$page_title = "Sản Phẩm Nổi Bật | VYVY Boutique";
 	include('inc/header.php'); 
@@ -18,15 +19,17 @@
 
 			<div class="panel-body">
 				<div class="row">
-  				<div class="col-sm-4 col-md-3">
-    				<div class="thumbnail">
-      				<img data-src="holder.js/250x250" src="img/pop1.png" alt="product_pop_1">
-      				<div class="caption">
-        				<strong>Pure White Pro - Dưỡng Trắng, Trị Nám, Tàn Nhang</strong>
-        				<p><a href="#" class="btn btn-success" role="button">Mua</a></p>
-      				</div>
-    				</div>
-  				</div>
+					<?php foreach ($pop_products as $pop_product_id => $pop_product) { ?>
+	  				<div class="col-sm-4 col-md-3">
+	    				<div class="thumbnail">      				
+	      				<img data-src="holder.js/250x250" src="<?php echo $pop_product["img"];?>" alt="<?php echo $pop_product["name"];?>">
+	      				<div class="caption">
+	        				<p><a href="popular_product_details.php?id=<?php echo $pop_product_id; ?>" class="thumbnail-caption"><strong><?php echo $pop_product["name"];?></strong></a></p>
+	        				<p><a href="#" class="btn btn-success" role="button">Thêm Vào Giỏ Hàng</a></p>
+	      				</div>
+	    				</div>
+	  				</div>
+  				<?php }; ?>
 				</div>
 			</div>
 		</div>
