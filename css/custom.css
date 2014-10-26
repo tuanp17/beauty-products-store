@@ -28,6 +28,14 @@ ul {
   color: #0A681A;
   text-decoration: underline;
 }
+
+.thumbnail-caption {
+  color: #505050;
+}
+
+.thumbnail-caption:hover {
+  color: #181818;
+}
 /*** Footer ***/
 .col-sm-4 > p {
   color: #a6afb2;
