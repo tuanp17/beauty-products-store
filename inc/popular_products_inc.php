@@ -1,5 +1,18 @@
 <?php
-	
+	function display_products_index($pop_product_id, $pop_product) {
+		$output = "";
+		$output = $output . '<div class="col-sm-3">';
+		$output = $output . '<a href="popular_product_details.php?id=' . $pop_product_id . '" class="thumbnail">';
+		$output = $output . '<img src="' . $pop_product["img"] . '" alt="' . $pop_product["name"] . '" class="img-responsive">';
+		$output = $output . '<p>';
+		$output = $output . '<strong>';
+		$output = $output . $pop_product["name"];
+		$output = $output . '</strong>';
+		$output = $output . '</p>';
+		$output = $output . '</a>';
+    $output = $output . '</div>';
+		return $output;
+	}
 	$pop_products = array();
 	$pop_products[100] = array(
 		"name" => "Sữa Rửa Mặt Trắng Da, Trị Mụn, Chống Lão Hóa",
