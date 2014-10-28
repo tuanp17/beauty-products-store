@@ -1,6 +1,7 @@
 <?php 
 $page_title='VY VY Boutique | Pure White';
 include("inc/header.php"); 
+include("inc/popular_products_inc.php");
 ?>
     <!-- Content -->
     <!-- first-carousel-content -->
@@ -22,28 +23,36 @@ include("inc/header.php");
                 <div class="carousel-inner">
                   <div class="item active">
                     <div class="row">
-                        <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="img/pop1.png" alt="Image" class="img-responsive"></a>
-                        </div>
-                        <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="img/pop2.png" alt="Image" class="img-responsive"></a>
-                        </div>
-                        <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="img/pop3.png" alt="Image" class="img-responsive"></a>
-                        </div>
-                        <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="img/pop4.png" alt="Image" class="img-responsive"></a>
-                        </div>
+                     <?php 
+                        $total_pop_products = count($pop_products);
+                        $position = 0;
+                        $display_products_index = "";
+                        foreach ($pop_products as $pop_product_id => $pop_product) {
+                          $position += 1;
+                          if ($total_pop_products - $position < 4) {
+                            $display_products_index = display_products_index($pop_product_id, $pop_product).$display_products_index;
+                          }
+                        }
+                        echo $display_products_index;
+                     ?>
                     </div>
                   <!--/row-->
                   </div>
                   <!--/item-->
                   <div class="item">
                     <div class="row">
-                      <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="img/pop1.png" alt="Image" class="img-responsive"></a>
-                      </div>
-                      <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="img/pop1.png" alt="Image" class="img-responsive"></a>
-                      </div>
-                      <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="img/pop1.png" alt="Image" class="img-responsive"></a>
-                      </div>
-                      <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="img/pop1.png" alt="Image" class="img-responsive"></a>
-                      </div>
+                      <?php 
+                        $total_pop_products = count($pop_products);
+                        $position = 0;
+                        $display_products_index = "";
+                        foreach ($pop_products as $pop_product_id => $pop_product) {
+                          $position += 1;
+                          if ($total_pop_products-($total_pop_products - $position) < 5) {
+                            $display_products_index = display_products_index($pop_product_id, $pop_product).$display_products_index;
+                          }
+                        }
+                        echo $display_products_index;
+                     ?>
                     </div>
                   <!--/row-->
                   </div>
