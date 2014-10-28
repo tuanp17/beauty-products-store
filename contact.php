@@ -1,8 +1,36 @@
 <?php
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
-		$name = $_POST["name"];
-		$email = $_POST["email"];
-		$message = $_POST["message"];
+		//Strip whitespace: in case user put the space between
+		$name = trim($_POST["name"]);
+		$email = trim($_POST["email"]);
+		$message = trim($_POST["message"]);
+
+		if ($name == "" OR $email == "" OR $message == "") {
+        echo "You must specify a value for name, email address, and message.";
+        exit;
+    }
+
+    foreach( $_POST as $value ){
+        if( stripos($value,'Content-Type:') !== FALSE ){
+            echo "There was a problem with the information you entered.";    
+            exit;
+        }
+    }
+
+    if ($_POST["address"] != "") {
+        echo "Your form submission has an error.";
+        exit;
+    }
+
+    require_once("inc/phpmailer/class.phpmailer.php");
+    $mail = new PHPMailer();
+   
+
+    if (!$mail->ValidateAddress($email)){
+        echo "You must specify a valid email address.";
+        exit;
+    }
+
 		$email_body = "";
 		$email_body = $email_body . "Name: " . $name . "\n";
 		$email_body = $email_body . "Email: " . $email . "\n";
@@ -66,7 +94,7 @@ include("inc/header.php");
 			  		//isset: check the variable exists or not
 			 			if (isset($_GET["status"]) and $_GET["status"] == "thanks") { ?>
 			 				<div class="alert alert-warning" role="alert">
-			 					<p>Cảm ơn $name đã giúp đỡ và hoàn thiện VYVY Boutique</p>
+			 					<p>Cảm ơn quý khách đã giúp đỡ và hoàn thiện VYVY Boutique</p>
 			 				</div>
 			 			<?php } else { ?>
 				 			<form class="form-horizontal" role="form" method="post" action="contact.php">
@@ -86,6 +114,13 @@ include("inc/header.php");
 				 					<label for="input_message" class="col-sm-3 control-label">Tin Nhắn:</label>
 				 					<div class="col-sm-9">
 				 						<textarea class="form-control" rows="3" id="input_message" name="message" placeholder="Giúp tôi hoàn thiện cửa hàng nhé!"></textarea>
+				 					</div>
+				 				</div>
+				 				<div class="form-group hidden">
+				 					<label for="backup_message" class="col-sm-3 control-label">Tin Nhắn:</label>
+				 					<div class="col-sm-9">
+				 						<input type="text" name="backup_message" id="backup_message">
+                    <p>Vui lòng để trống ô này. Xin cảm ơn.</p>
 				 					</div>
 				 				</div>
 				 				<div class="form-group">
