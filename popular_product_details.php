@@ -25,7 +25,7 @@
 	<ol class="breadcrumb">
 			<li><a href="index.php">Trang Chủ</a></li>
 			<li><a href="index.php">Chăm Sóc</a></li>
-			<li><a href="popular_products.php">Nổi Bật</a></li>
+			<li><a href="popular_products.panel-heading">Nổi Bật</a></li>
 			<li class="active"><?php echo $pop_product["name"]; ?></li>
 	</ol>
 
