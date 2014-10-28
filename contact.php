@@ -1,60 +1,67 @@
 <?php
-	if ($_SERVER["REQUEST_METHOD"] == "POST") {
-		//Strip whitespace: in case user put the space between
-		$name = trim($_POST["name"]);
-		$email = trim($_POST["email"]);
-		$message = trim($_POST["message"]);
+//define variables and set to empty values
+$name_error = $email_error = $message_error = "";
+$name = $email = $message = "";
 
-		if ($name == "" OR $email == "" OR $message == "") {
-        echo "You must specify a value for name, email address, and message.";
-        exit;
-    }
 
-    foreach( $_POST as $value ){
-        if( stripos($value,'Content-Type:') !== FALSE ){
-            echo "There was a problem with the information you entered.";    
-            exit;
-        }
-    }
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+//		$email_body = "";
+//		$email_body = $email_body . "Name: " . $name . "\n";
+//		$email_body = $email_body . "Email: " . $email . "\n";
+//		$email_body = $email_body . "Message: " . $message . "\n"; 
 
-    if ($_POST["address"] != "") {
-        echo "Your form submission has an error.";
-        exit;
-    }
+	
 
-    require_once("inc/phpmailer/class.phpmailer.php");
-    $mail = new PHPMailer();
-   
+	
 
-    if (!$mail->ValidateAddress($email)){
-        echo "You must specify a valid email address.";
-        exit;
-    }
+// } else {
+	if ($name=$_POST["name"] and $email=$_POST["email"] and $message=$_POST["message"]) {
 
-		$email_body = "";
-		$email_body = $email_body . "Name: " . $name . "\n";
-		$email_body = $email_body . "Email: " . $email . "\n";
-		$email_body = $email_body . "Message: " . $message . "\n"; 
 
-		$mail->SetFrom($email, $name);
-    $address = "orders@shirts4mike.com";
-    $mail->AddAddress($address, "Shirts 4 Mike");
-    $mail->Subject    = "Shirts 4 Mike Contact Form Submission | " . $name;
-    $mail->MsgHTML($email_body);
-
-    if(!$mail->Send()) {
-      echo "There was a problem sending the email: " . $mail->ErrorInfo;
-      exit;
-    }
-
-		// "header": redirect to another file (in this line: redirect to same page.)
+	// "header": redirect to another file (in this line: redirect to same page.)
+	// This step creates the web address(new URL) with a variable and a value of variable. 
+	// Those will be sent to the server.
+	// "contact.php?status=thanks" is the web address for the thank you message.
+	// "status" is the variable ---- "thanks" is the specify value of variable
 		header("Location: contact.php?status=thanks");
-		// This step creates the web address(new URL) with a variable and a value of variable. 
-		// Those will be sent to the server.
-		// "contact.php?status=thanks" is the web address for the thank you message.
-		// "status" is the variable ---- "thanks" is the specify value of variable
 		exit;
+	} else {
+
+		if (empty($_POST["name"])) {
+   	$name_error = "Vui lòng điền đầy đủ họ tên.";
+	} else {
+   	$name = test_input($_POST["name"]);
+   // check if name only contains letters and whitespace
+  	if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+     $name_error = "Vui lòng điền đầy đủ họ tên với các chữ cái và khoảng trắng."; 
+   	}
+ 	}
+
+ 	if (empty($_POST["email"])) {
+   	$email_error = "Vui lòng nhập email của bạn.";
+ 	} else {
+   	$email = test_input($_POST["email"]);
+   	// check if e-mail address is well-formed
+   	if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+     $email_error = "Email không chính xác."; 
+   	}
+ 	}
+
+ 	if (empty($_POST["message"])) {
+   	$message_error = "Vui lòng nhập tin nhắn.";
+ 	} else {
+   	$message = test_input($_POST["message"]);
+ 	}
+
 	}
+}
+
+function test_input($data) {
+ $data = trim($data);
+ $data = stripslashes($data);
+ $data = htmlspecialchars($data);
+ return $data;
+}
 ?>
 
 <?php 
@@ -102,34 +109,30 @@ include("inc/header.php");
 			  		//else -> show the form.
 			  		//isset: check the variable exists or not
 			 			if (isset($_GET["status"]) and $_GET["status"] == "thanks") { ?>
-			 				<div class="alert alert-warning" role="alert">
-			 					<p>Cảm ơn quý khách đã giúp đỡ và hoàn thiện VYVY Boutique</p>
-			 				</div>
-			 			<?php } else { ?>
-				 			<form class="form-horizontal" role="form" method="post" action="contact.php">
+			 				<div class="alert alert-warning" role="alert"> 
+			 					<p>Cảm ơn quý khách đã giúp đỡ và hoàn thiện VYVY Boutique. Tôi sẽ trả lời sớm nhất câu hỏi của quý khách thông qua email.</p>
+			 				</div> 
+			 			<?php } else { ?> 
+				 			<form class="form-horizontal" role="form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 				 				<div class="form-group">
 				 					<label for="input_name" class="col-sm-3 control-label">Họ Tên:</label>
 				 					<div class="col-sm-9">
-				 						<input type="name" class="form-control" id="input_name" name="name" placeholder="Họ Tên">
+				 						<input type="name" class="form-control" value="<?php echo $name;?>" name="name" placeholder="Họ Tên">
+				 						<span class="error">* <?php echo $name_error; ?></span>
 				 					</div>
 				 				</div>
 				 				<div class="form-group">
 				 					<label for="input_email" class="col-sm-3 control-label">Email:</label>
 				 					<div class="col-sm-9">
-				 						<input type="email" class="form-control" id="input_email" name="email" placeholder="Email">
+				 						<input type="email" class="form-control" value="<?php echo $email;?>" name="email" placeholder="Email">
+				 						<span class="error">* <?php echo $email_error; ?></span>
 				 					</div>
 				 				</div>
 				 				<div class="form-group">
 				 					<label for="input_message" class="col-sm-3 control-label">Tin Nhắn:</label>
 				 					<div class="col-sm-9">
-				 						<textarea class="form-control" rows="3" id="input_message" name="message" placeholder="Giúp tôi hoàn thiện cửa hàng nhé!"></textarea>
-				 					</div>
-				 				</div>
-				 				<div class="form-group hidden">
-				 					<label for="backup_message" class="col-sm-3 control-label">Tin Nhắn:</label>
-				 					<div class="col-sm-9">
-				 						<input type="text" name="backup_message" id="backup_message">
-                    <p>Vui lòng để trống ô này. Xin cảm ơn.</p>
+				 						<textarea class="form-control" rows="3" value="<?php echo $message;?>" name="message" placeholder="Giúp tôi hoàn thiện cửa hàng nhé!"></textarea>
+				 						<span class="error">* <?php echo $message_error; ?></span>
 				 					</div>
 				 				</div>
 				 				<div class="form-group">
@@ -138,7 +141,7 @@ include("inc/header.php");
 				 					</div>
 				 				</div>
 				 			</form>
-			 			<?php } ?>
+			 			<?php } ?> 
 			 		</div>
 			 	</div>
 			</div>
