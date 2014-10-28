@@ -36,7 +36,16 @@
 		$email_body = $email_body . "Email: " . $email . "\n";
 		$email_body = $email_body . "Message: " . $message . "\n"; 
 
-		// TODO SEND MAIL:
+		$mail->SetFrom($email, $name);
+    $address = "orders@shirts4mike.com";
+    $mail->AddAddress($address, "Shirts 4 Mike");
+    $mail->Subject    = "Shirts 4 Mike Contact Form Submission | " . $name;
+    $mail->MsgHTML($email_body);
+
+    if(!$mail->Send()) {
+      echo "There was a problem sending the email: " . $mail->ErrorInfo;
+      exit;
+    }
 
 		// "header": redirect to another file (in this line: redirect to same page.)
 		header("Location: contact.php?status=thanks");
