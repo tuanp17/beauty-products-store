@@ -7,6 +7,9 @@ body {
 ul {
   list-style: none;
 }
+.error {
+  color: #FF0000;
+}
 .navbar-brand {
   color: 
 }
@@ -29,6 +32,14 @@ ul {
   text-decoration: underline;
 }
 
+.thumbnail {
+  color: #505050;
+}
+
+.thumbnail:hover {
+  color:  #181818;
+  text-decoration: underline;
+}
 .thumbnail-caption {
   color: #505050;
 }
