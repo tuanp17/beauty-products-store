@@ -5,26 +5,51 @@ $name = $email = $message = "";
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-//		$email_body = "";
-//		$email_body = $email_body . "Name: " . $name . "\n";
-//		$email_body = $email_body . "Email: " . $email . "\n";
-//		$email_body = $email_body . "Message: " . $message . "\n"; 
 
-	
-
-	
-
-// } else {
 	if ($name=$_POST["name"] and $email=$_POST["email"] and $message=$_POST["message"]) {
-
-
+		define('OWNER', 'tuanp1711@gmail.com'); // GMail username
+		define('OWNER_PASS', 'truonghaiuyen171112'); // GMail password
+		function smtpmailer($to, $from, $from_name, $subject, $body) { 
+			require_once 'inc/phpmailer/PHPMailerAutoload.php';
+			require_once 'inc/phpmailer/class.smtp.php';
+			global $error;
+			$mail = new PHPMailer();  // create a new object
+			$mail->IsSMTP(); // enable SMTP
+			$mail->SMTPDebug = 0;  // debugging: 1 = errors and messages, 2 = messages only
+			$mail->SMTPAuth = true;  // authentication enabled
+			$mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for GMail
+			$mail->Host = 'smtp.gmail.com';
+			$mail->Port = 465; 
+			$mail->Username = OWNER;  
+			$mail->Password = OWNER_PASS;           
+			$mail->SetFrom($from, $from_name);
+			$mail->isHTML(true);                                  
+			$mail->Subject = $subject;
+			$mail->Body = $body;
+			$mail->AddAddress($to);
+			if(!$mail->Send()) {
+				$error = 'Mail error: '.$mail->ErrorInfo; 
+				return false;
+			} else {
+				$error = 'Message sent!';
+				return true;
+			}
+		}
 	// "header": redirect to another file (in this line: redirect to same page.)
 	// This step creates the web address(new URL) with a variable and a value of variable. 
 	// Those will be sent to the server.
 	// "contact.php?status=thanks" is the web address for the thank you message.
 	// "status" is the variable ---- "thanks" is the specify value of variable
-		header("Location: contact.php?status=thanks");
-		exit;
+		//Send the message to the owner
+		if (smtpmailer(OWNER, $email, $name, 'VYVYBoutique - y kien khach hang', $message)) {
+			//Send the email to client 
+			if (smtpmailer($email, OWNER, 'VYVY Boutique', 'VYVY Boutique', '<strong>VYVYBoutique</strong> trân thành cảm ơn ' . $name . ' đã quan tâm và ủng hộ cửa hàng. 
+				Tin nhắn của quý khách sẽ được trả lời trong vòng 24 giờ thông qua email. Xin trân trọng cảm ơn.')) {
+				header("Location: contact.php?status=thanks");
+				exit;
+			}	
+		}
+		
 	} else {
 
 		if (empty($_POST["name"])) {
@@ -110,7 +135,10 @@ include("inc/header.php");
 			  		//isset: check the variable exists or not
 			 			if (isset($_GET["status"]) and $_GET["status"] == "thanks") { ?>
 			 				<div class="alert alert-warning" role="alert"> 
-			 					<p>Cảm ơn quý khách đã giúp đỡ và hoàn thiện VYVY Boutique. Tôi sẽ trả lời sớm nhất câu hỏi của quý khách thông qua email.</p>
+			 					<p>Cảm ơn quý khách đã giúp đỡ và hoàn thiện cửa hàng. 
+			 						Câu hỏi và ý kiến của quý khách sẽ được trả lời trong vòng 24 giờ thông qua email.
+			 						Trở về <a href="index.php">Trang Chủ</a>
+			 					</p>
 			 				</div> 
 			 			<?php } else { ?> 
 				 			<form class="form-horizontal" role="form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
