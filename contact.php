@@ -7,14 +7,15 @@ $name = $email = $message = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 	if ($name=$_POST["name"] and $email=$_POST["email"] and $message=$_POST["message"]) {
-		define('OWNER', 'tuanp1711@gmail.com'); // GMail username
-		define('OWNER_PASS', 'truonghaiuyen171112'); // GMail password
-		function smtpmailer($to, $from, $from_name, $subject, $body) { 
+		
+		define('OWNER', 'vyvyboutiqueshop@gmail.com'); // GMail username
+		define('OWNER_PASS', 'nguyenthingocvy'); // GMail password
+		function smtpmailer($to, $from, $from_name, $subject, $body) { 	
 			require_once 'inc/phpmailer/PHPMailerAutoload.php';
 			require_once 'inc/phpmailer/class.smtp.php';
 			global $error;
 			$mail = new PHPMailer();  // create a new object
-			$mail->IsSMTP(); // enable SMTP
+			$mail->isSMTP();    // enable SMTP
 			$mail->SMTPDebug = 0;  // debugging: 1 = errors and messages, 2 = messages only
 			$mail->SMTPAuth = true;  // authentication enabled
 			$mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for GMail
@@ -35,20 +36,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				return true;
 			}
 		}
-	// "header": redirect to another file (in this line: redirect to same page.)
-	// This step creates the web address(new URL) with a variable and a value of variable. 
-	// Those will be sent to the server.
-	// "contact.php?status=thanks" is the web address for the thank you message.
-	// "status" is the variable ---- "thanks" is the specify value of variable
-		//Send the message to the owner
-		if (smtpmailer(OWNER, $email, $name, 'VYVYBoutique - y kien khach hang', $message)) {
-			//Send the email to client 
-			if (smtpmailer($email, OWNER, 'VYVY Boutique', 'VYVY Boutique', '<strong>VYVYBoutique</strong> trân thành cảm ơn ' . $name . ' đã quan tâm và ủng hộ cửa hàng. 
-				Tin nhắn của quý khách sẽ được trả lời trong vòng 24 giờ thông qua email. Xin trân trọng cảm ơn.')) {
+		// "header": redirect to another file (in this line: redirect to same page.)
+		// This step creates the web address(new URL) with a variable and a value of variable. 
+		// Those will be sent to the server.
+		// "contact.php?status=thanks" is the web address for the thank you message.
+		// "status" is the variable ---- "thanks" is the specify value of variable
+		
+		//Send the email to client 
+		if 	(smtpmailer($email, OWNER, 'VYVY Boutique', 'VYVY Boutique', '<strong>VYVYBoutique</strong> trân thành cảm ơn ' . $name . ' đã quan tâm và ủng hộ cửa hàng. 
+					Tin nhắn của quý khách sẽ được trả lời trong vòng 24 giờ thông qua email. Xin trân trọng cảm ơn. ')) {
+			if 	(smtpmailer(
+						OWNER, 
+						$email, 
+						$email, 
+						'Y Kien Khach Hang', 
+						'<strong>Nội dung tin nhắn của khách hàng:</strong> '.$message. '<br><strong>Người gửi:</strong> '.$name. 
+						'<br><strong>Email của người gửi: </strong>' .$email)
+					) {
 				header("Location: contact.php?status=thanks");
 				exit;
-			}	
-		}
+			}
+		}	
+		
 		
 	} else {
 
@@ -81,12 +90,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	}
 }
 
-function test_input($data) {
- $data = trim($data);
- $data = stripslashes($data);
- $data = htmlspecialchars($data);
- return $data;
-}
+
 ?>
 
 <?php 
