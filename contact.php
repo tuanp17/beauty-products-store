@@ -45,6 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		//Send the email to client 
 		if 	(smtpmailer($email, OWNER, 'VYVY Boutique', 'VYVY Boutique', '<strong>VYVYBoutique</strong> trân thành cảm ơn ' . $name . ' đã quan tâm và ủng hộ cửa hàng. 
 					Tin nhắn của quý khách sẽ được trả lời trong vòng 24 giờ thông qua email. Xin trân trọng cảm ơn. ')) {
+		//Send emal to owner
 			if 	(smtpmailer(
 						OWNER, 
 						$email, 
