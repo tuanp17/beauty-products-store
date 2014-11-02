@@ -1,5 +1,5 @@
 <?php
-
+require_once('../inc/initialize.php');
 //define variables and set to empty values
 $name_error = $email_error = $message_error = "";
 $name = $email = $message = "";
@@ -12,8 +12,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		define('OWNER', 'vyvyboutiqueshop@gmail.com'); // GMail username
 		define('OWNER_PASS', 'nguyenthingocvy'); // GMail password
 		function smtpmailer($to, $from, $from_name, $subject, $body) { 	
-			require_once ROOT_PATH . 'inc/phpmailer/PHPMailerAutoload.php';
-			require_once ROOT_PATH . 'inc/phpmailer/class.smtp.php';
+			require_once '../inc/phpmailer/PHPMailerAutoload.php';
+			require_once '../inc/phpmailer/class.smtp.php';
 			global $error;
 			$mail = new PHPMailer();  // create a new object
 			$mail->isSMTP();    // enable SMTP
@@ -96,7 +96,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 <?php 
-require_once('../inc/initialize.php');
 $page_title='Liên Hệ | Pure White';
 include(ROOT_PATH . 'inc/header.php'); 
 ?>
