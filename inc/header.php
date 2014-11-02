@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?php echo $page_title; ?></title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo BASE_URL; ?>css/bootstrap.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700,700italic' rel='stylesheet' type='text/css'>
-    <link href="css/custom.css" rel="stylesheet">
+    <link href="<?php echo BASE_URL; ?>css/custom.css" rel="stylesheet">
   </head>
   <body>
     <!-- Nav Bar header -->
@@ -20,7 +20,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php"><strong>VY VY Boutique</strong></a>
+          <a class="navbar-brand" href="<?php echo BASE_URL; ?>"><strong>VY VY Boutique</strong></a>
         </div><!-- End navbar-header -->
 
         <div class="collapse navbar-collapse" id="navbar-collapse">
@@ -38,7 +38,7 @@
 
     <!-- Carousel -->
     <div class = "container">
-      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <div id="header-carousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li class="active" data-target="#myCarousel" data-slide-to="0"></li>
           <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -47,19 +47,19 @@
 
         <div class="carousel-inner">
           <div class="item active">
-            <img src="img/skincarecream.png" alt = "slide-1">
+            <img src="<?php echo BASE_URL; ?>img/skincarecream.png" alt = "slide-1">
           </div>
           <div class="item">
-            <img src="img/skincarecream.png" alt = "slide-2">
+            <img src="<?php echo BASE_URL; ?>img/skincarecream.png" alt = "slide-2">
           </div>
           <div class="item">
-            <img src="img/skincarecream.png" alt = "slide-3">       
+            <img src="<?php echo BASE_URL; ?>img/skincarecream.png" alt = "slide-3">       
           </div>
         </div>
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <a class="left carousel-control" href="#header-carousel" data-slide="prev">
           <span class="icon-prev"></span>
         </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <a class="right carousel-control" href="#header-carousel" data-slide="next">
           <span class="icon-next"></span>
         </a>
       </div>
@@ -82,23 +82,23 @@
           <div class="collapse navbar-collapse" id="navbar-link">
             <ul class="nav navbar-nav">
               <li>
-                <a href="index.php"><img src="img/home.png" alt="home-icon">&nbsp;<strong>Trang Chủ</strong></a>
+                <a href="<?php echo BASE_URL; ?>"><img src="<?php echo BASE_URL; ?>img/home.png" alt="home-icon">&nbsp;<strong>Trang Chủ</strong></a>
               </li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <img src="img/shopping-cart.png" alt="cart-icon">&nbsp;<strong>Chăm Sóc&nbsp;</strong><span class="caret"></span>
+                  <img src="<?php echo BASE_URL; ?>img/shopping-cart.png" alt="cart-icon">&nbsp;<strong>Chăm Sóc&nbsp;</strong><span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu" role="menu">
-                  <li><a href="popular_products.php"><strong>Nổi Bật</strong></a></li>
-                  <li><a href="newest_products.php"><strong>Mới Nhất</strong></a></li>
-                  <li><a href="face_products.php"><strong>Dành Cho Da Mặt</strong></a></li>
-                  <li><a href="body_products.php"><strong>Dành Cho Body</strong></a></li>
+                  <li><a href="<?php echo BASE_URL; ?>popular_products/"><strong>Nổi Bật</strong></a></li>
+                  <li><a href="<?php echo BASE_URL; ?>newest_products.php"><strong>Mới Nhất</strong></a></li>
+                  <li><a href="<?php echo BASE_URL; ?>face_products.php"><strong>Dành Cho Da Mặt</strong></a></li>
+                  <li><a href="<?php echo BASE_URL; ?>body_products.php"><strong>Dành Cho Body</strong></a></li>
                 </ul>
               </li>
-              <li><a href="#"><img src="img/star-half-empty.png">&nbsp;<strong>Phản Hồi</strong></a></li>
-              <li><a href="#"><img src="img/magic.png" alt="secret-icon">&nbsp;<strong>Bí Quyết</strong></a></li>
-              <li><a href="#"><img src="img/credit-card.png" alt="credit-card-icon">&nbsp;<strong>Thanh Toán</strong></a></li>
-              <li><a href="contact.php"><img src="img/user.png" alt="contact-icon">&nbsp;<strong>Liên hệ</strong></a></li>
+              <li><a href="#"><img src="<?php echo BASE_URL; ?>img/star-half-empty.png">&nbsp;<strong>Phản Hồi</strong></a></li>
+              <li><a href="#"><img src="<?php echo BASE_URL; ?>img/magic.png" alt="secret-icon">&nbsp;<strong>Bí Quyết</strong></a></li>
+              <li><a href="#"><img src="<?php echo BASE_URL; ?>img/credit-card.png" alt="credit-card-icon">&nbsp;<strong>Thanh Toán</strong></a></li>
+              <li><a href="<?php echo BASE_URL; ?>contact/"><img src="<?php echo BASE_URL; ?>img/user.png" alt="contact-icon">&nbsp;<strong>Liên hệ</strong></a></li>
               <li>
                 <form class="navbar-form" role="search">
                   <div class="form-group">
