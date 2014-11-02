@@ -1,6 +1,7 @@
 <?php 
+require_once('inc/initialize.php');
 $page_title='VY VY Boutique | Pure White';
-include("inc/header.php"); 
+include(ROOT_PATH. 'inc/header.php');  
 include("inc/popular_products_inc.php");
 ?>
     <!-- Content -->
@@ -9,8 +10,8 @@ include("inc/popular_products_inc.php");
       <hr>
       <div class="panel panel-success panel-custom">
         <div class="panel-heading">
-          <h3 class="panel-title"><img src="img/thumbs-up.png" alt="popular-products-logo">&nbsp;&nbsp;Sản Phẩm Nổi Bật
-            <p class="pull-right"><a href="popular_products.php">Xem thêm&nbsp;<img src="img/forward.png" alt="forward-icon">
+          <h3 class="panel-title"><img src="<?php echo BASE_URL; ?>img/thumbs-up.png" alt="popular-products-logo">&nbsp;&nbsp;Sản Phẩm Nổi Bật
+            <p class="pull-right"><a href="<?php echo BASE_URL; ?>popular_products/">Xem thêm&nbsp;<img src="<?php echo BASE_URL; ?>img/forward.png" alt="forward-icon">
             </a></p>
           </h3>
           
@@ -79,8 +80,8 @@ include("inc/popular_products_inc.php");
     <div class="container">
       <div class="panel panel-success panel-custom">
         <div class="panel-heading">
-          <h3 class="panel-title"><img src="img/star.png" alt="newest-products-logo">&nbsp;&nbsp;Sản Phẩm Mới Nhất
-            <p class="pull-right"><a href="newest_products.php">Xem thêm&nbsp;<img src="img/forward.png" alt="forward-icon">
+          <h3 class="panel-title"><img src="<?php echo BASE_URL; ?>img/star.png" alt="newest-products-logo">&nbsp;&nbsp;Sản Phẩm Mới Nhất
+            <p class="pull-right"><a href="<?php echo BASE_URL; ?>newest_products.php">Xem thêm&nbsp;<img src="<?php echo BASE_URL; ?>img/forward.png" alt="forward-icon">
             </a></p>
           </h3>
           
@@ -141,8 +142,8 @@ include("inc/popular_products_inc.php");
     <div class="container">
       <div class="panel panel-success panel-custom">
         <div class="panel-heading">
-          <h3 class="panel-title"><img src="img/smile-o.png" alt="face-logo">&nbsp;&nbsp;Chăm Sóc Da Mặt
-            <p class="pull-right"><a href="face_products.php">Xem thêm&nbsp;<img src="img/forward.png" alt="forward-icon">
+          <h3 class="panel-title"><img src="<?php echo BASE_URL; ?>img/smile-o.png" alt="face-logo">&nbsp;&nbsp;Chăm Sóc Da Mặt
+            <p class="pull-right"><a href="<?php echo BASE_URL; ?>face_products.php">Xem thêm&nbsp;<img src="<?php echo BASE_URL; ?>img/forward.png" alt="forward-icon">
             </a></p>
           </h3>
           
@@ -204,8 +205,8 @@ include("inc/popular_products_inc.php");
     <div class="container">
       <div class="panel panel-success panel-custom">
         <div class="panel-heading">
-          <h3 class="panel-title"><img src="img/child.png" alt="face-logo">&nbsp;&nbsp;Chăm Sóc Cơ Thể
-            <p class="pull-right"><a href="body_products.php">Xem thêm&nbsp;<img src="img/forward.png" alt="forward-icon">
+          <h3 class="panel-title"><img src="<?php echo BASE_URL; ?>img/child.png" alt="face-logo">&nbsp;&nbsp;Chăm Sóc Cơ Thể
+            <p class="pull-right"><a href="<?php echo BASE_URL; ?>body_products.php">Xem thêm&nbsp;<img src="<?php echo BASE_URL; ?>img/forward.png" alt="forward-icon">
             </a></p>
           </h3>        
         </div>
@@ -263,4 +264,4 @@ include("inc/popular_products_inc.php");
     <!-- End second-carousel-content -->
     <!-- End Content -->
     
-<?php include("inc/footer.php"); ?>
+<?php include(ROOT_PATH . 'inc/footer.php'); ?>
