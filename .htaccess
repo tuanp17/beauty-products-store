@@ -1,2 +1,3 @@
 RewriteEngine On
-RewriteRule 
+RewriteRule ^popular_products/$ /popular_products/popular_products.php
+RewriteRule ^popular_products/([0-9]+)/$ /popular_products/popular_product_details.php?id=$1
