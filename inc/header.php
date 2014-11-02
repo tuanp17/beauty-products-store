@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?php echo $page_title; ?></title>
-    <link href="<?php echo BASE_URL; ?>css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo BASE_URL; ?>css/bootstrap.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700,700italic' rel='stylesheet' type='text/css'>
     <link href="<?php echo BASE_URL; ?>css/custom.css" rel="stylesheet">
   </head>
@@ -40,9 +40,9 @@
     <div class = "container">
       <div id="header-carousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
-          <li class="active" data-target="#myCarousel" data-slide-to="0"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>          
+          <li class="active" data-target="#header-carousel" data-slide-to="0"></li>
+          <li data-target="#header-carousel" data-slide-to="1"></li>
+          <li data-target="#header-carousel" data-slide-to="2"></li>          
         </ol>
 
         <div class="carousel-inner">
