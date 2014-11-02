@@ -2,7 +2,7 @@
 	function display_products_index($pop_product_id, $pop_product) {
 		$output = "";
 		$output = $output . '<div class="col-sm-3">';
-		$output = $output . '<a href="popular_product_details.php?id=' . $pop_product_id . '" class="thumbnail">';
+		$output = $output . '<a href="'.BASE_URL.'popular_products/' . $pop_product_id . '/" class="thumbnail">';
 		$output = $output . '<img src="' . BASE_URL . $pop_product["img"] . '" alt="' . $pop_product["name"] . '" class="img-responsive">';
 		$output = $output . '<p>';
 		$output = $output . '<strong>';
@@ -11,6 +11,29 @@
 		$output = $output . '</p>';
 		$output = $output . '</a>';
     $output = $output . '</div>';
+		return $output;
+	}
+
+	function display_products_pop_page($pop_product_id, $pop_product) {
+		$output = "";
+		$output = $output . '<div class="col-sm-4 col-md-3">';
+		$output = $output . '<div class="thumbnail">';
+		$output = $output . '<img data-src="holder.js/250x250" src="' .BASE_URL . $pop_product["img"]. '" alt="'.BASE_URL . $pop_product["name"].'">';
+		$output = $output . '<div class="caption">';
+		$output = $output . '<p>';
+		$output = $output . '<a href="'.BASE_URL.'popular_products/'.$pop_product_id.'/" class="thumbnail-caption">';
+		$output = $output . '<strong>';
+		$output = $output . $pop_product["name"];
+		$output = $output . '</strong>';
+		$output = $output . '</a>';
+		$output = $output . '</p>';
+		$output = $output . '<p>';
+		$output = $output . '<a href="'.BASE_URL.'popular_products/'.$pop_product_id.'/" class="btn btn-success" role="button">Xem chi tiết';
+		$output = $output . '</a>';
+		$output = $output . '</p>';
+		$output = $output . '</div>';
+		$output = $output . '</div>';
+		$output = $output . '</div>';
 		return $output;
 	}
 	$pop_products = array();
