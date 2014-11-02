@@ -7,12 +7,19 @@ body {
 ul {
   list-style: none;
 }
+.width-receipt {
+  width: 50%;
+}
+.link-receipt {
+  color: #0A9B25;
+}
+.link-receipt:hover {
+  color: #0A681A;
+}
 .error {
   color: #FF0000;
 }
-.navbar-brand {
-  color: 
-}
+
 .navigation-link a {
   display: block;
   color: #707070;
