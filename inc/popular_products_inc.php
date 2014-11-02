@@ -3,7 +3,7 @@
 		$output = "";
 		$output = $output . '<div class="col-sm-3">';
 		$output = $output . '<a href="popular_product_details.php?id=' . $pop_product_id . '" class="thumbnail">';
-		$output = $output . '<img src="' . $pop_product["img"] . '" alt="' . $pop_product["name"] . '" class="img-responsive">';
+		$output = $output . '<img src="' . BASE_URL . $pop_product["img"] . '" alt="' . $pop_product["name"] . '" class="img-responsive">';
 		$output = $output . '<p>';
 		$output = $output . '<strong>';
 		$output = $output . $pop_product["name"];
