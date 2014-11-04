@@ -28,10 +28,10 @@ include("inc/popular_products_inc.php");
                         $total_pop_products = count($pop_products);
                         $position = 0;
                         $display_products_index = "";
-                        foreach ($pop_products as $pop_product_id => $pop_product) {
+                        foreach ($pop_products as $pop_product) {
                           $position += 1;
                           if ($total_pop_products - $position < 4) {
-                            $display_products_index = display_products_index($pop_product_id, $pop_product).$display_products_index;
+                            $display_products_index = display_products_index($pop_product).$display_products_index;
                           }
                         }
                         echo $display_products_index;
@@ -46,10 +46,10 @@ include("inc/popular_products_inc.php");
                         $total_pop_products = count($pop_products);
                         $position = 0;
                         $display_products_index = "";
-                        foreach ($pop_products as $pop_product_id => $pop_product) {
+                        foreach ($pop_products as $pop_product) {
                           $position += 1;
                           if ($total_pop_products-($total_pop_products - $position) < 5) {
-                            $display_products_index = display_products_index($pop_product_id, $pop_product).$display_products_index;
+                            $display_products_index = display_products_index($pop_product).$display_products_index;
                           }
                         }
                         echo $display_products_index;
