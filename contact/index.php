@@ -54,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 					'Y Kien Khach Hang', 
 					'<strong>Nội dung tin nhắn của khách hàng:</strong> '.$message. '<br><strong>Người gửi:</strong> '.$name. 
 					'<br><strong>Email của người gửi: </strong>' .$email);				 
-			header("Location: " . BASE_URL .  "contact/?status=thanks");
+			header("Location: " . BASE_URL .  "contact/thanks/");
 			exit;
 		} else {
 			$error_message = "Đã có lỗi xảy ra trong quá trình gửi email. Xin quý khách vui lòng thử lại.";
