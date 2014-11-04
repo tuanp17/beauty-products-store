@@ -1,3 +1,12 @@
 RewriteEngine On
 RewriteRule ^popular_products/$ /popular_products/popular_products.php
 RewriteRule ^popular_products/([0-9]+)/$ /popular_products/popular_product_details.php?id=$1
+RewriteRule ^contact/thanks/$ /contact/?status=thanks
+RewriteRule ^receipt.php$ /receipt/ [R=301]
+RewriteRule ^contact.php$ /contact/ [R=301]
+RewriteRule ^popular_products.php$ /popular_products/ [R=301]
+RewriteRule ^(popular_products/[0-9]+)$ /$1/ [R=301]
+
+
+RewriteCond %{QUERY_STRING} ^id=([0-9]+)$
+RewriteRule ^popular_product_details.php$ /popular_products/%1/? [R=301]
