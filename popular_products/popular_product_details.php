@@ -1,6 +1,10 @@
 <?php 
 	require_once('../inc/initialize.php');
 	require_once(ROOT_PATH . 'inc/popular_products_inc.php'); 
+	$pop_products = get_all_pop_products();
+
+
+
 	$pop_product_id = $_GET["id"];
 	$pop_product = $pop_products[$pop_product_id];
 
