@@ -72,7 +72,6 @@
         <div class="container">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed pull-left" data-toggle="collapse" data-target="#navbar-link">
-              <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
@@ -102,10 +101,10 @@
               <li>
                 <form class="navbar-form" role="search">
                   <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Mã Số Sản Phẩm">
+                    <input type="text" name="p" class="form-control" placeholder="Mã Số Sản Phẩm">
                   </div>
-                  <button type="submit" class="btn btn-warning hidden-xs">Tìm Kiếm</button>
-                  <button type="submit" class="btn btn-warning visible-xs center-block">Tìm Kiếm</button>
+                  <button type="submit" class="btn btn-warning hidden-xs" value="go">Tìm Kiếm</button>
+                  <button type="submit" class="btn btn-warning visible-xs center-block" value="go">Tìm Kiếm</button>
                 </form>
               </li>
             </ul>
@@ -114,4 +113,5 @@
       </nav>
     </div>
     <!-- End navigation bar -->
+
     
