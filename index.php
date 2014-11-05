@@ -2,7 +2,9 @@
 require_once('inc/initialize.php');
 $page_title='VY VY Boutique | Pure White';
 include(ROOT_PATH. 'inc/header.php');  
-include("inc/popular_products_inc.php");
+include(ROOT_PATH. 'inc/popular_products_inc.php');
+$recent_pop_products_slide_1 = get_recent_pop_products_slide_1_index_page();
+$recent_pop_products_slide_2 = get_recent_pop_products_slide_2_index_page();
 ?>
     <!-- Content -->
     <!-- first-carousel-content -->
@@ -25,14 +27,12 @@ include("inc/popular_products_inc.php");
                   <div class="item active">
                     <div class="row">
                      <?php 
-                        $total_pop_products = count($pop_products);
-                        $position = 0;
+                        
                         $display_products_index = "";
-                        foreach ($pop_products as $pop_product) {
-                          $position += 1;
-                          if ($total_pop_products - $position < 4) {
+                        foreach ($recent_pop_products_slide_1 as $pop_product) {
+                          
                             $display_products_index = display_products_index($pop_product).$display_products_index;
-                          }
+                
                         }
                         echo $display_products_index;
                      ?>
@@ -43,14 +43,12 @@ include("inc/popular_products_inc.php");
                   <div class="item">
                     <div class="row">
                       <?php 
-                        $total_pop_products = count($pop_products);
-                        $position = 0;
+                      
                         $display_products_index = "";
-                        foreach ($pop_products as $pop_product) {
-                          $position += 1;
-                          if ($total_pop_products-($total_pop_products - $position) < 5) {
+                        foreach ($recent_pop_products_slide_2 as $pop_product) {
+                         
                             $display_products_index = display_products_index($pop_product).$display_products_index;
-                          }
+                          
                         }
                         echo $display_products_index;
                      ?>
