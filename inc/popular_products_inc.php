@@ -37,6 +37,16 @@ function display_products_pop_page($pop_product) {
 	return $output;
 }
 
+function display_search_results($pop_product) {
+	$output = "";
+	$output = $output . '<div class="col-sm-4 col-md-3">';
+	$output = $output . '<div class="thumbnail">';
+	$output = $output . '<img data-src="holder.js/250x250" src="' .BASE_URL . $pop_product["img"]. '" alt="'.BASE_URL . $pop_product["name"].'">';
+	$output = $output . '</div>';
+	$output = $output . '</div>';
+	return $output;
+}
+
 function get_recent_pop_products_slide_1_index_page() {
 	$recent = array();
   $all = get_all_pop_products();
@@ -69,7 +79,28 @@ function get_recent_pop_products_slide_2_index_page() {
   return $recent;
 }
 
+function get_search_products($search_term) {
+	$search_results = array();
+	$all = get_all_pop_products();
 
+	foreach ($all as $pop_product) {
+		$search_results[] = $pop_product;
+	}
+	return $search_results;
+}
+
+function get_products_count() {
+  return count(get_all_pop_products());
+}
+
+function get_products_subset($position_start, $position_end) {
+	$subset = array();
+	$all = get_all_pop_products();
+
+	foreach ($all as $pop_product) {
+		$subset[] = $pop_product;
+	}
+}
 function get_all_pop_products() {
 	$pop_products = array();
 	$pop_products[100] = array(
@@ -171,6 +202,58 @@ function get_all_pop_products() {
 		"description" => "Là sự kết hợp dung dịch serum one, vitamin E, B5,C, chất chống nắng UVA-UVB, dược tá chất tạo nền.",
 	);
 	$pop_products[115] = array(
+		"name" => "Kem Face Pure White Pro - Dưỡng trắng, trị thâm, mụn",
+		"img" => "img/pop4.png",
+		"price" => "350K",
+		"description" => "Tái tạo da hư tổn, sần sùi. Thu nhỏ lỗ chân lông, giảm mụn đầu đen. Giảm nết nhăn mắt.",
+	);
+	$pop_products[116] = array(
+		"name" => "Sữa Rửa Mặt Trắng Da, Trị Mụn, Chống Lão Hóa",
+		"img" => "img/pop1.png",
+		"price" => "250K",
+		"description" => "Sửa rửa mặt Pure White có tác dụng dưỡng trắng da, trị mụn, se khít lỗ chân lông, sạch nhờn, kìm dầu, 
+		và chống dị ứng. Da di ứng hoàn toàn dùng được.", 
+	);
+	$pop_products[117] = array(
+		"name" => "Pure White Pro - Kem Body Hoa Hồng",
+		"img" => "img/pop2.png",
+		"price" => "280K",
+		"description" => "Mặt kem hai lớp láng mịn kèm với những hạt massage Hoa Hồng tan ngay khi thoa.
+		Thoa lên da không hề bị bết dính, thấm nhanh vào da.",
+	);
+	$pop_products[118] = array(
+		"name" => "Pure White Pro - Dưỡng Trắng, Trị Nám, Tàn Nhang",
+		"img" => "img/pop3.png",
+		"price" => "400K",
+		"description" => "Là sự kết hợp dung dịch serum one, vitamin E, B5,C, chất chống nắng UVA-UVB, dược tá chất tạo nền.",
+	);
+	$pop_products[119] = array(
+		"name" => "Kem Face Pure White Pro - Dưỡng trắng, trị thâm, mụn",
+		"img" => "img/pop4.png",
+		"price" => "350K",
+		"description" => "Tái tạo da hư tổn, sần sùi. Thu nhỏ lỗ chân lông, giảm mụn đầu đen. Giảm nết nhăn mắt.",
+	);
+	$pop_products[120] = array(
+		"name" => "Sữa Rửa Mặt Trắng Da, Trị Mụn, Chống Lão Hóa",
+		"img" => "img/pop1.png",
+		"price" => "250K",
+		"description" => "Sửa rửa mặt Pure White có tác dụng dưỡng trắng da, trị mụn, se khít lỗ chân lông, sạch nhờn, kìm dầu, 
+		và chống dị ứng. Da di ứng hoàn toàn dùng được.", 
+	);
+	$pop_products[121] = array(
+		"name" => "Pure White Pro - Kem Body Hoa Hồng",
+		"img" => "img/pop2.png",
+		"price" => "280K",
+		"description" => "Mặt kem hai lớp láng mịn kèm với những hạt massage Hoa Hồng tan ngay khi thoa.
+		Thoa lên da không hề bị bết dính, thấm nhanh vào da.",
+	);
+	$pop_products[122] = array(
+		"name" => "Pure White Pro - Dưỡng Trắng, Trị Nám, Tàn Nhang",
+		"img" => "img/pop3.png",
+		"price" => "400K",
+		"description" => "Là sự kết hợp dung dịch serum one, vitamin E, B5,C, chất chống nắng UVA-UVB, dược tá chất tạo nền.",
+	);
+	$pop_products[123] = array(
 		"name" => "Kem Face Pure White Pro - Dưỡng trắng, trị thâm, mụn",
 		"img" => "img/pop4.png",
 		"price" => "350K",
