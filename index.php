@@ -30,9 +30,7 @@ $recent_pop_products_slide_2 = get_recent_pop_products_slide_2_index_page();
                         
                         $display_products_index = "";
                         foreach ($recent_pop_products_slide_1 as $pop_product) {
-                          
-                            $display_products_index = display_products_index($pop_product).$display_products_index;
-                
+                          $display_products_index = display_products_index($pop_product).$display_products_index;
                         }
                         echo $display_products_index;
                      ?>
@@ -45,10 +43,8 @@ $recent_pop_products_slide_2 = get_recent_pop_products_slide_2_index_page();
                       <?php 
                       
                         $display_products_index = "";
-                        foreach ($recent_pop_products_slide_2 as $pop_product) {
-                         
-                            $display_products_index = display_products_index($pop_product).$display_products_index;
-                          
+                        foreach ($recent_pop_products_slide_2 as $pop_product) {                       
+                          $display_products_index = display_products_index($pop_product).$display_products_index;                        
                         }
                         echo $display_products_index;
                      ?>
