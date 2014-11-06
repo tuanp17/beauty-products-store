@@ -99,9 +99,9 @@
               <li><a href="#"><img src="<?php echo BASE_URL; ?>img/credit-card.png" alt="credit-card-icon">&nbsp;<strong>Thanh Toán</strong></a></li>
               <li><a href="<?php echo BASE_URL; ?>contact/"><img src="<?php echo BASE_URL; ?>img/user.png" alt="contact-icon">&nbsp;<strong>Liên hệ</strong></a></li>
               <li>
-                <form class="navbar-form" role="search">
+                <form class="navbar-form" role="search" method="get" action="<?php echo BASE_URL?>search/">
                   <div class="form-group">
-                    <input type="text" name="p" class="form-control" placeholder="Mã Số Sản Phẩm">
+                    <input type="text" name="s" class="form-control" placeholder="Mã Số Sản Phẩm">
                   </div>
                   <button type="submit" class="btn btn-warning hidden-xs" value="go">Tìm Kiếm</button>
                   <button type="submit" class="btn btn-warning visible-xs center-block" value="go">Tìm Kiếm</button>
@@ -113,5 +113,3 @@
       </nav>
     </div>
     <!-- End navigation bar -->
-
-    
