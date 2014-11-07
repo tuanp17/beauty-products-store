@@ -3,8 +3,8 @@ require_once('inc/initialize.php');
 $page_title='VY VY Boutique | Pure White';
 include(ROOT_PATH. 'inc/header.php');  
 include(ROOT_PATH. 'inc/popular_products_inc.php');
-$recent_pop_products_slide_1 = get_recent_pop_products_slide_1_index_page();
-$recent_pop_products_slide_2 = get_recent_pop_products_slide_2_index_page();
+$recent_pop_products_slide_1 = get_recent_products_slide_1_index_page();
+$recent_pop_products_slide_2 = get_recent_products_slide_2_index_page();
 ?>
     <!-- Content -->
     <!-- first-carousel-content -->
@@ -29,8 +29,8 @@ $recent_pop_products_slide_2 = get_recent_pop_products_slide_2_index_page();
                      <?php 
                         
                         $display_products_index = "";
-                        foreach ($recent_pop_products_slide_1 as $pop_product) {
-                          $display_products_index = display_products_index($pop_product).$display_products_index;
+                        foreach ($recent_pop_products_slide_1 as $product) {
+                          $display_products_index = display_products_index($product).$display_products_index;
                         }
                         echo $display_products_index;
                      ?>
@@ -43,8 +43,8 @@ $recent_pop_products_slide_2 = get_recent_pop_products_slide_2_index_page();
                       <?php 
                       
                         $display_products_index = "";
-                        foreach ($recent_pop_products_slide_2 as $pop_product) {                       
-                          $display_products_index = display_products_index($pop_product).$display_products_index;                        
+                        foreach ($recent_pop_products_slide_2 as $product) {                       
+                          $display_products_index = display_products_index($product).$display_products_index;                        
                         }
                         echo $display_products_index;
                      ?>
