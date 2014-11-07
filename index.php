@@ -24,34 +24,7 @@ $recent_pop_products_slide_2 = get_recent_products_slide_2_index_page();
               <div id="popular-products-carousel" class="carousel slide">      
                 <!-- Carousel items -->
                 <div class="carousel-inner">
-                  <div class="item active">
-                    <div class="row">
-                     <?php 
-                        
-                        $display_products_index = "";
-                        foreach ($recent_pop_products_slide_1 as $product) {
-                          $display_products_index = display_products_index($product).$display_products_index;
-                        }
-                        echo $display_products_index;
-                     ?>
-                    </div>
-                  <!--/row-->
-                  </div>
-                  <!--/item-->
-                  <div class="item">
-                    <div class="row">
-                      <?php 
-                      
-                        $display_products_index = "";
-                        foreach ($recent_pop_products_slide_2 as $product) {                       
-                          $display_products_index = display_products_index($product).$display_products_index;                        
-                        }
-                        echo $display_products_index;
-                     ?>
-                    </div>
-                  <!--/row-->
-                  </div>
-                  <!--/item-->
+                 <?php include (ROOT_PATH . 'inc/partial_slide_index.html.php');?>
                 </div>
                 <!--/carousel-inner--> 
                 <a class="left carousel-control" href="#popular-products-carousel" data-slide="prev">
