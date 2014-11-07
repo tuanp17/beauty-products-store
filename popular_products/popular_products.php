@@ -1,7 +1,7 @@
 <?php
 // Controller
 require_once('../inc/initialize.php');
-include(ROOT_PATH . 'inc/popular_products_inc.php'); 
+include(ROOT_PATH . 'inc/products.php'); 
 
 
 
