@@ -2,7 +2,7 @@
 require_once('inc/initialize.php');
 $page_title='VY VY Boutique | Pure White';
 include(ROOT_PATH. 'inc/header.php');  
-include(ROOT_PATH. 'inc/popular_products_inc.php');
+include(ROOT_PATH. 'inc/products.php');
 $recent_pop_products_slide_1 = get_recent_products_slide_1_index_page();
 $recent_pop_products_slide_2 = get_recent_products_slide_2_index_page();
 ?>
