@@ -101,7 +101,7 @@
               <li>
                 <form class="navbar-form" role="search" method="get" action="<?php echo BASE_URL?>search/">
                   <div class="form-group">
-                    <input type="text" name="s" class="form-control" placeholder="Mã Số Sản Phẩm">
+                    <input type="text" name="s" class="form-control" placeholder="Tên Sản Phẩm">
                   </div>
                   <button type="submit" class="btn btn-warning hidden-xs" value="go">Tìm Kiếm</button>
                   <button type="submit" class="btn btn-warning visible-xs center-block" value="go">Tìm Kiếm</button>
