@@ -19,11 +19,16 @@ ul {
 .error {
   color: #FF0000;
 }
-
+/*
+.pagination {
+  padding-left: 45%;
+}
+*/
 .navigation-link a {
   display: block;
   color: #707070;
 }
+
 .navbar-nav li {
   padding-right: 7px;
 }
