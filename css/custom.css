@@ -102,6 +102,9 @@ ul {
 a:link {
   text-decoration: none;  
 }
+.alert-link:hover {
+  text-decoration: underline;
+}
 
 /*** Thumbnail slider ***/
 .thumbnail {
