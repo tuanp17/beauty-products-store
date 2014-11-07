@@ -1,29 +1,29 @@
 <?php 
 	require_once('../inc/initialize.php');
 	require_once(ROOT_PATH . 'inc/popular_products_inc.php'); 
-	$pop_products = get_all_pop_products();
+	$products = get_all_products();
 
 
 
-	$pop_product_id = $_GET["id"];
-	$pop_product = $pop_products[$pop_product_id];
+	$product_id = $_GET["id"];
+	$product = $products[$product_id];
 
 //check the id products in case somebody changes the id on web address. If id is valid, go ahead. If not, it will redirect to
 //popular_products.php again. 
 	if (isset($_GET["id"])) {
-		$pop_product_id = $_GET["id"];
-		if (isset($pop_products[$pop_product_id])) {
-			$pop_product = $pop_products[$pop_product_id];
+		$product_id = $_GET["id"];
+		if (isset($products[$product_id])) {
+			$product = $products[$product_id];
 		}
 	}
-	if (!isset($pop_product)) {
+	if (!isset($product)) {
 		header("Location:" . BASE_URL .  "popular_products/");
 		exit();
 	}
 ?>
 
 <?php
-	$page_title = $pop_product["name"];
+	$page_title = $product["name"];
 	include(ROOT_PATH .'inc/header.php'); 
 ?>
 <div class="container">
@@ -31,7 +31,7 @@
 			<li><a href="<?php echo BASE_URL; ?>">Trang Chủ</a></li>
 			<li><a href="<?php echo BASE_URL; ?>">Chăm Sóc</a></li>
 			<li><a href="<?php echo BASE_URL; ?>popular_products/">Nổi Bật</a></li>
-			<li class="active"><?php echo BASE_URL . $pop_product["name"]; ?></li>
+			<li class="active"><?php $product["name"]; ?></li>
 	</ol>
 
 	<div class="panel panel-success panel-custom">
@@ -44,12 +44,12 @@
 		<div class="panel-body">
 			<div class="row">
 				<div class="col-xs-6">
-					<img src="<?php echo BASE_URL . $pop_product["img"]; ?>" alt="<?php echo BASE_URL . $pop_product["name"]; ?>">
+					<img src="<?php echo BASE_URL . $product["img"]; ?>" alt="<?php echo BASE_URL . $product["name"]; ?>">
 				</div>
 				<div class="col-xs-6">
-					<h4><strong><?php echo $pop_product["name"]; ?></strong></h4>
-					<p><?php echo $pop_product["description"]; ?></p>
-					<h4><strong>Giá: <?php echo $pop_product["price"]; ?></strong></h4>
+					<h4><strong><?php echo $product["name"]; ?></strong></h4>
+					<p><?php echo $product["description"]; ?></p>
+					<h4><strong>Giá: <?php echo $product["price"]; ?></strong></h4>
 					<p><a href="#" class="btn btn-success" role="button">Thêm Vào Giỏ Hàng</a></p>
 				</div>
 			</div>
