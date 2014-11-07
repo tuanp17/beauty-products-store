@@ -1,6 +1,6 @@
 <?php 
 	require_once('../inc/initialize.php');
-	require_once(ROOT_PATH . 'inc/popular_products_inc.php'); 
+	require_once(ROOT_PATH . 'inc/products.php'); 
 	$products = get_all_products();
 
 
