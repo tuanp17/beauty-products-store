@@ -85,7 +85,7 @@ function get_recent_products_slide_2_index_page() {
   
   foreach($all as $product) {
     $position = $position + 1;
-    if ($position > 16 && $position < 21) {
+    if ($position > $total_products - 8 && $position < $total_products - 3) {
       $recent[] = $product;
     }
   }
