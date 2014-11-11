@@ -69,7 +69,7 @@ function get_recent_products_slide_1_index_page() {
   foreach($all as $product) {
       $position = $position + 1;
       if ($total_products - $position < 4) {
-          $recent[] = $product;
+        $recent[] = $product;
       }
   }
   return $recent;
@@ -79,13 +79,14 @@ function get_recent_products_slide_2_index_page() {
 	$recent = array();
   $all = get_all_products();
 
+
   $total_products = count($all);
   $position = 0;
   
   foreach($all as $product) {
     $position = $position + 1;
-    if ($total_products-($total_products - $position) < 5) {
-        $recent[] = $product;
+    if ($position > 16 && $position < 21) {
+      $recent[] = $product;
     }
   }
   return $recent;
@@ -101,7 +102,7 @@ function get_search_products($s) {
 	$all = get_all_products();
 
 	foreach ($all as $product) {
-		if (stripos($product["name"],$s) !== false) {
+		if ((stripos($product["name"],$s) !== false) OR (strpos($product["sku"],$s) !== false)) {
 			$search_results[] = $product;
 		}
 	}
@@ -144,157 +145,157 @@ function get_products_subset($position_start, $position_end) {
 function get_all_products() {
 	$products = array();
 	$products[100] = array(
-		"name" => "Orange",
+		"name" => "100",
 		"img" => "img/pop1.png",
 		"price" => "250K",
 		"description" => "Sửa rửa mặt Pure White có tác dụng dưỡng trắng da, trị mụn, se khít lỗ chân lông, sạch nhờn, kìm dầu, 
 		và chống dị ứng. Da di ứng hoàn toàn dùng được.", 
 	);
 	$products[101] = array(
-		"name" => "Blue",
+		"name" => "101",
 		"img" => "img/pop2.png",
 		"price" => "280K",
 		"description" => "Mặt kem hai lớp láng mịn kèm với những hạt massage Hoa Hồng tan ngay khi thoa.
 		Thoa lên da không hề bị bết dính, thấm nhanh vào da.",
 	);
 	$products[102] = array(
-		"name" => "Pink",
+		"name" => "102",
 		"img" => "img/pop3.png",
 		"price" => "400K",
 		"description" => "Là sự kết hợp dung dịch serum one, vitamin E, B5,C, chất chống nắng UVA-UVB, dược tá chất tạo nền.",
 	);
 	$products[103] = array(
-		"name" => "Yellow",
+		"name" => "103",
 		"img" => "img/pop4.png",
 		"price" => "350K",
 		"description" => "Tái tạo da hư tổn, sần sùi. Thu nhỏ lỗ chân lông, giảm mụn đầu đen. Giảm nết nhăn mắt.",
 	);
 	$products[104] = array(
-		"name" => "Green",
+		"name" => "104",
 		"img" => "img/pop1.png",
 		"price" => "250K",
 		"description" => "Sửa rửa mặt Pure White có tác dụng dưỡng trắng da, trị mụn, se khít lỗ chân lông, sạch nhờn, kìm dầu, 
 		và chống dị ứng. Da di ứng hoàn toàn dùng được.", 
 	);
 	$products[105] = array(
-		"name" => "Cyan",
+		"name" => "105",
 		"img" => "img/pop2.png",
 		"price" => "280K",
 		"description" => "Mặt kem hai lớp láng mịn kèm với những hạt massage Hoa Hồng tan ngay khi thoa.
 		Thoa lên da không hề bị bết dính, thấm nhanh vào da.",
 	);
 	$products[106] = array(
-		"name" => "Chocolate",
+		"name" => "106",
 		"img" => "img/pop3.png",
 		"price" => "400K",
 		"description" => "Là sự kết hợp dung dịch serum one, vitamin E, B5,C, chất chống nắng UVA-UVB, dược tá chất tạo nền.",
 	);
 	$products[107] = array(
-		"name" => "Khaki",
+		"name" => "107",
 		"img" => "img/pop4.png",
 		"price" => "350K",
 		"description" => "Tái tạo da hư tổn, sần sùi. Thu nhỏ lỗ chân lông, giảm mụn đầu đen. Giảm nết nhăn mắt.",
 	);
 	$products[108] = array(
-		"name" => "Lavender",
+		"name" => "108",
 		"img" => "img/pop1.png",
 		"price" => "250K",
 		"description" => "Sửa rửa mặt Pure White có tác dụng dưỡng trắng da, trị mụn, se khít lỗ chân lông, sạch nhờn, kìm dầu, 
 		và chống dị ứng. Da di ứng hoàn toàn dùng được.", 
 	);
 	$products[109] = array(
-		"name" => "Ivory",
+		"name" => "109",
 		"img" => "img/pop2.png",
 		"price" => "280K",
 		"description" => "Mặt kem hai lớp láng mịn kèm với những hạt massage Hoa Hồng tan ngay khi thoa.
 		Thoa lên da không hề bị bết dính, thấm nhanh vào da.",
 	);
 	$products[110] = array(
-		"name" => "Lightblue",
+		"name" => "110",
 		"img" => "img/pop3.png",
 		"price" => "400K",
 		"description" => "Là sự kết hợp dung dịch serum one, vitamin E, B5,C, chất chống nắng UVA-UVB, dược tá chất tạo nền.",
 	);
 	$products[111] = array(
-		"name" => "Peru",
+		"name" => "111",
 		"img" => "img/pop4.png",
 		"price" => "350K",
 		"description" => "Tái tạo da hư tổn, sần sùi. Thu nhỏ lỗ chân lông, giảm mụn đầu đen. Giảm nết nhăn mắt.",
 	);
 	$products[112] = array(
-		"name" => "Plum",
+		"name" => "112",
 		"img" => "img/pop1.png",
 		"price" => "250K",
 		"description" => "Sửa rửa mặt Pure White có tác dụng dưỡng trắng da, trị mụn, se khít lỗ chân lông, sạch nhờn, kìm dầu, 
 		và chống dị ứng. Da di ứng hoàn toàn dùng được.", 
 	);
 	$products[113] = array(
-		"name" => "Olive",
+		"name" => "113",
 		"img" => "img/pop2.png",
 		"price" => "280K",
 		"description" => "Mặt kem hai lớp láng mịn kèm với những hạt massage Hoa Hồng tan ngay khi thoa.
 		Thoa lên da không hề bị bết dính, thấm nhanh vào da.",
 	);
 	$products[114] = array(
-		"name" => "Powderblue",
+		"name" => "114",
 		"img" => "img/pop3.png",
 		"price" => "400K",
 		"description" => "Là sự kết hợp dung dịch serum one, vitamin E, B5,C, chất chống nắng UVA-UVB, dược tá chất tạo nền.",
 	);
 	$products[115] = array(
-		"name" => "Orchid",
+		"name" => "115",
 		"img" => "img/pop4.png",
 		"price" => "350K",
 		"description" => "Tái tạo da hư tổn, sần sùi. Thu nhỏ lỗ chân lông, giảm mụn đầu đen. Giảm nết nhăn mắt.",
 	);
 	$products[116] = array(
-		"name" => "Palegreen",
+		"name" => "116",
 		"img" => "img/pop1.png",
 		"price" => "250K",
 		"description" => "Sửa rửa mặt Pure White có tác dụng dưỡng trắng da, trị mụn, se khít lỗ chân lông, sạch nhờn, kìm dầu, 
 		và chống dị ứng. Da di ứng hoàn toàn dùng được.", 
 	);
 	$products[117] = array(
-		"name" => "Purple",
+		"name" => "117",
 		"img" => "img/pop2.png",
 		"price" => "280K",
 		"description" => "Mặt kem hai lớp láng mịn kèm với những hạt massage Hoa Hồng tan ngay khi thoa.
 		Thoa lên da không hề bị bết dính, thấm nhanh vào da.",
 	);
 	$products[118] = array(
-		"name" => "Skyblue",
+		"name" => "118",
 		"img" => "img/pop3.png",
 		"price" => "400K",
 		"description" => "Là sự kết hợp dung dịch serum one, vitamin E, B5,C, chất chống nắng UVA-UVB, dược tá chất tạo nền.",
 	);
 	$products[119] = array(
-		"name" => "Silver",
+		"name" => "119",
 		"img" => "img/pop4.png",
 		"price" => "350K",
 		"description" => "Tái tạo da hư tổn, sần sùi. Thu nhỏ lỗ chân lông, giảm mụn đầu đen. Giảm nết nhăn mắt.",
 	);
 	$products[120] = array(
-		"name" => "Wheat",
+		"name" => "120",
 		"img" => "img/pop1.png",
 		"price" => "250K",
 		"description" => "Sửa rửa mặt Pure White có tác dụng dưỡng trắng da, trị mụn, se khít lỗ chân lông, sạch nhờn, kìm dầu, 
 		và chống dị ứng. Da di ứng hoàn toàn dùng được.", 
 	);
 	$products[121] = array(
-		"name" => "Thistle",
+		"name" => "121",
 		"img" => "img/pop2.png",
 		"price" => "280K",
 		"description" => "Mặt kem hai lớp láng mịn kèm với những hạt massage Hoa Hồng tan ngay khi thoa.
 		Thoa lên da không hề bị bết dính, thấm nhanh vào da.",
 	);
 	$products[122] = array(
-		"name" => "Tan",
+		"name" => "122",
 		"img" => "img/pop3.png",
 		"price" => "400K",
 		"description" => "Là sự kết hợp dung dịch serum one, vitamin E, B5,C, chất chống nắng UVA-UVB, dược tá chất tạo nền.",
 	);
 	$products[123] = array(
-		"name" => "Teal",
+		"name" => "123",
 		"img" => "img/pop4.png",
 		"price" => "350K",
 		"description" => "Tái tạo da hư tổn, sần sùi. Thu nhỏ lỗ chân lông, giảm mụn đầu đen. Giảm nết nhăn mắt.",
