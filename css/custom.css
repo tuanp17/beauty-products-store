@@ -7,6 +7,7 @@ body {
 ul {
   list-style: none;
 }
+/*** receipt page ***/
 .width-receipt {
   width: 50%;
 }
@@ -16,14 +17,12 @@ ul {
 .link-receipt:hover {
   color: #0A681A;
 }
+/*** End receipt page ***/
+
 .error {
   color: #FF0000;
 }
-/*
-.pagination {
-  padding-left: 45%;
-}
-*/
+
 .navigation-link a {
   display: block;
   color: #707070;
@@ -59,6 +58,12 @@ ul {
 .thumbnail-caption:hover {
   color: #181818;
 }
+
+/*** Header ***/
+.carousel-header {
+  margin-top: -10px;
+}
+/*** End header ***/
 /*** Footer ***/
 .col-sm-4 > p {
   color: #a6afb2;
@@ -107,6 +112,7 @@ a:link {
 }
 
 /*** Thumbnail slider ***/
+
 .thumbnail {
   display: block;
   padding: 4px;
