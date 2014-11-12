@@ -61,11 +61,9 @@ include(ROOT_PATH . 'inc/header.php');
 			<div class="panel-body">
 				<div class="row">
 					<?php 					
-            $display_products_pop_page = "";
-						foreach ($products as $product) {           
-							$display_products_pop_page = display_products_pop_page($product).$display_products_pop_page;	
+						foreach ($products as $product) {     
+							include(ROOT_PATH. 'inc/partial_products_list_view.html.php');      
   					} 
-  					echo $display_products_pop_page;
   				?>
 				</div>
 			<?php include(ROOT_PATH . 'inc/partial_pagination.html.php'); ?>
