@@ -38,7 +38,7 @@
 
     <!-- Carousel -->
     <div class = "container">
-      <div id="header-carousel" class="carousel slide" data-ride="carousel">
+      <div id="header-carousel" class="carousel slide carousel-header" data-ride="carousel">
         <ol class="carousel-indicators">
           <li class="active" data-target="#header-carousel" data-slide-to="0"></li>
           <li data-target="#header-carousel" data-slide-to="1"></li>
@@ -47,13 +47,13 @@
 
         <div class="carousel-inner">
           <div class="item active">
-            <img src="<?php echo BASE_URL; ?>img/skincarecream.png" alt = "slide-1">
+            <img src="<?php echo BASE_URL; ?>img/header-slide-pic-1.png" alt = "slide-1">
           </div>
           <div class="item">
-            <img src="<?php echo BASE_URL; ?>img/skincarecream.png" alt = "slide-2">
+            <img src="<?php echo BASE_URL; ?>img/header-slide-pic-2.png" alt = "slide-2">
           </div>
           <div class="item">
-            <img src="<?php echo BASE_URL; ?>img/skincarecream.png" alt = "slide-3">       
+            <img src="<?php echo BASE_URL; ?>img/header-slide-pic-3.png" alt = "slide-3">       
           </div>
         </div>
         <a class="left carousel-control" href="#header-carousel" data-slide="prev">
