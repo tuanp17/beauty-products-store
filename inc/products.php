@@ -14,6 +14,7 @@ function display_products_index($product) {
 	return $output;
 }
 
+/* This is the function for display products popular page
 function display_products_pop_page($product) {
 	$output = "";
 	$output = $output . '<div class="col-sm-4 col-md-3">';
@@ -36,6 +37,7 @@ function display_products_pop_page($product) {
 	$output = $output . '</div>';
 	return $output;
 }
+*/
 
 function display_search_results($product) {
 	$output = "";
