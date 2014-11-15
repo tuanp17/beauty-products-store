@@ -25,7 +25,7 @@
           </div>
           <div class="col-xs-6 col-sm-4">
             <ul class="footer-nav-icon">
-              <li><a href="https://www.facebook.com/VYVYBoutique.beautiful?ref=br_rs"><img src="<?php echo BASE_URL; ?>img/facebook.png" alt="facebook-logo"></a></li>
+              <li><a target="_blank"href="https://www.facebook.com/VYVYBoutique.beautiful?ref=br_rs"><img src="<?php echo BASE_URL; ?>img/facebook.png" alt="facebook-logo"></a></li>
               <li><a href="mailto:teresangocvy@gmail.com"><img src="<?php echo BASE_URL; ?>img/envelope.png" alt="mail-logo"></a></li>
             </ul>
           </div>
