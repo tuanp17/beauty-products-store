@@ -271,3 +271,60 @@ a:link {
 
 }
 /*** End Media Queries ***/
+
+/*** Display products ***/
+.products {
+  margin-left: 45px;
+  width: 100%;
+  padding: 0 2px;
+
+}
+
+.products > li {
+  list-style: none;
+  display: inline-block;
+  width: 250px;
+  text-align: center;
+  float: left;
+  position: relative;
+}
+
+.products li a {
+  display: block;
+  padding: 20px 0;
+  margin: 0 20px;
+  float: left;
+  color: #606060;
+}
+
+.products li img {
+  width: 220px;
+  height: 220px;
+}
+
+.products li a:hover {
+  text-decoration: underline;
+  color: #181818;
+}
+
+.products-index {
+  margin-left: 31px;
+  margin-top: -15px;  
+}
+
+.glyphicon.glyphicon-circle-arrow-left,.glyphicon.glyphicon-circle-arrow-right  {
+  color: green;
+}
+
+.glyphicon.glyphicon.glyphicon-circle-arrow-right {
+  margin-left: 15px;
+}
+
+.glyphicon.glyphicon.glyphicon-circle-arrow-left {
+  margin-right: 15px;
+}
+
+/*** End display products ***/
+
+
+
