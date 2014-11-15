@@ -1,16 +1,16 @@
 <?php
 function display_products_index($product) {
 	$output = "";
-	$output = $output . '<div class="col-sm-3">';
-	$output = $output . '<a href="'.BASE_URL.'popular_products/' . $product["sku"]. '/" class="thumbnail">';
-	$output = $output . '<img src="' . BASE_URL . $product["img"] . '" alt="' . $product["name"] . '" class="img-responsive">';
+	$output = $output . '<li>';
+	$output = $output . '<a href="'.BASE_URL.'popular_products/' . $product["sku"]. '/">';
+	$output = $output . '<img src="' . BASE_URL . $product["img"] . '" alt="' . $product["name"] . '">';
 	$output = $output . '<p>';
 	$output = $output . '<strong>';
 	$output = $output . $product["name"];
 	$output = $output . '</strong>';
 	$output = $output . '</p>';
 	$output = $output . '</a>';
-  $output = $output . '</div>';
+  $output = $output . '</li>';
 	return $output;
 }
 
@@ -147,53 +147,53 @@ function get_products_subset($position_start, $position_end) {
 function get_all_products() {
 	$products = array();
 	$products[100] = array(
-		"name" => "100",
-		"img" => "img/pop1.png",
+		"name" => "Pure White Pro - Dưỡng trắng da, trị thâm, mụn, tàn nhang",
+		"img" => "img/VB01-1.jpg",
 		"price" => "250K",
 		"description" => "Sửa rửa mặt Pure White có tác dụng dưỡng trắng da, trị mụn, se khít lỗ chân lông, sạch nhờn, kìm dầu, 
 		và chống dị ứng. Da di ứng hoàn toàn dùng được.", 
 	);
 	$products[101] = array(
-		"name" => "101",
-		"img" => "img/pop2.png",
+		"name" => "Pure White Pro - Dưỡng trắng da, trị thâm, mụn",
+		"img" => "img/VF04.jpg",
 		"price" => "280K",
 		"description" => "Mặt kem hai lớp láng mịn kèm với những hạt massage Hoa Hồng tan ngay khi thoa.
 		Thoa lên da không hề bị bết dính, thấm nhanh vào da.",
 	);
 	$products[102] = array(
-		"name" => "102",
-		"img" => "img/pop3.png",
+		"name" => "Pure White Pro - Dưỡng trắng da, trị thâm, mụn",
+		"img" => "img/VF07.jpg",
 		"price" => "400K",
 		"description" => "Là sự kết hợp dung dịch serum one, vitamin E, B5,C, chất chống nắng UVA-UVB, dược tá chất tạo nền.",
 	);
 	$products[103] = array(
-		"name" => "103",
+		"name" => "Pure White Pro - Dưỡng trắng da, trị thâm, mụn",
 		"img" => "img/pop4.png",
 		"price" => "350K",
 		"description" => "Tái tạo da hư tổn, sần sùi. Thu nhỏ lỗ chân lông, giảm mụn đầu đen. Giảm nết nhăn mắt.",
 	);
 	$products[104] = array(
-		"name" => "104",
+		"name" => "Pure White Pro - Dưỡng trắng da, trị thâm, mụn",
 		"img" => "img/pop1.png",
 		"price" => "250K",
 		"description" => "Sửa rửa mặt Pure White có tác dụng dưỡng trắng da, trị mụn, se khít lỗ chân lông, sạch nhờn, kìm dầu, 
 		và chống dị ứng. Da di ứng hoàn toàn dùng được.", 
 	);
 	$products[105] = array(
-		"name" => "105",
+		"name" => "Pure White Pro - Dưỡng trắng da, trị thâm, mụn",
 		"img" => "img/pop2.png",
 		"price" => "280K",
 		"description" => "Mặt kem hai lớp láng mịn kèm với những hạt massage Hoa Hồng tan ngay khi thoa.
 		Thoa lên da không hề bị bết dính, thấm nhanh vào da.",
 	);
 	$products[106] = array(
-		"name" => "106",
+		"name" => "Pure White Pro - Dưỡng trắng da, trị thâm, mụn",
 		"img" => "img/pop3.png",
 		"price" => "400K",
 		"description" => "Là sự kết hợp dung dịch serum one, vitamin E, B5,C, chất chống nắng UVA-UVB, dược tá chất tạo nền.",
 	);
 	$products[107] = array(
-		"name" => "107",
+		"name" => "Pure White Pro - Dưỡng trắng da, trị thâm, mụn",
 		"img" => "img/pop4.png",
 		"price" => "350K",
 		"description" => "Tái tạo da hư tổn, sần sùi. Thu nhỏ lỗ chân lông, giảm mụn đầu đen. Giảm nết nhăn mắt.",
@@ -298,7 +298,7 @@ function get_all_products() {
 	);
 	$products[123] = array(
 		"name" => "123",
-		"img" => "img/pop4.png",
+		"img" => "img/VB01-1.jpg",
 		"price" => "350K",
 		"description" => "Tái tạo da hư tổn, sần sùi. Thu nhỏ lỗ chân lông, giảm mụn đầu đen. Giảm nết nhăn mắt.",
 	);
