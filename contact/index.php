@@ -117,10 +117,10 @@ include(ROOT_PATH . 'inc/header.php');
   					<i>Địa Chỉ:</i> 7 Phan Chu Trinh-P.Xương Huân-Nha Trang-Khánh Hòa<br>
   					<i>Điện Thoại:</i> 01687520700<br>
   					<i>Email:</i> <a href="mailto:teresangocvy@gmail.com">teresangocvy@gmail.com</a><br>
-  					<i>Trang Cá Nhân:</i><a href="https://www.facebook.com/cobengocvydethuongnhinhanh"> /cobengocvydethuongnhinhanh</a><br>
-  					<i>Cửa Hàng:</i><a href="https://www.facebook.com/VYVYBoutique.beautiful"> /VYVYBoutique.beautiful</a><br>
+  					<i>Trang Cá Nhân:</i><a target="_blank" href="https://www.facebook.com/cobengocvydethuongnhinhanh"> /cobengocvydethuongnhinhanh</a><br>
+  					<i>Cửa Hàng:</i><a target="_blank" href="https://www.facebook.com/VYVYBoutique.beautiful"> /VYVYBoutique.beautiful</a><br>
   					<ul class="icon-bar-contact">
-  						<li><a href="https://www.facebook.com/VYVYBoutique.beautiful?ref=br_rs"><img src="<?php echo BASE_URL; ?>img/facebook-icon.png" alt="facebook-icon"></a></li>
+  						<li><a target="_blank" href="https://www.facebook.com/VYVYBoutique.beautiful?ref=br_rs"><img src="<?php echo BASE_URL; ?>img/facebook-icon.png" alt="facebook-icon"></a></li>
   						<li><a href="#"><img src="<?php echo BASE_URL; ?>img/zalo-icon.jpg" alt="zalo-icon"></a></li>
   						<li><a href="#"><img src="<?php echo BASE_URL; ?>img/viber-icon.png" alt="viber-icon"></a></li>
   					</ul>
