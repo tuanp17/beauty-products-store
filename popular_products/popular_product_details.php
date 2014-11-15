@@ -44,7 +44,7 @@
 		<div class="panel-body">
 			<div class="row">
 				<div class="col-xs-6">
-					<img src="<?php echo BASE_URL . $product["img"]; ?>" alt="<?php echo BASE_URL . $product["name"]; ?>">
+					<img src="<?php echo BASE_URL . $product["img"]; ?>" alt="<?php echo BASE_URL . $product["name"]; ?>" width="550" height="600">
 				</div>
 				<div class="col-xs-6">
 					<h4><strong><?php echo $product["name"]; ?></strong></h4>
