@@ -1,5 +1,5 @@
  <div class="item active">
-  <div class="row">
+  <ul class="products products-index">
    <?php 
       
       $display_products_index = "";
@@ -8,12 +8,12 @@
       }
       echo $display_products_index;
    ?>
-  </div>
+  </ul>
 <!--/row-->
 </div>
 <!--/item-->
 <div class="item">
-  <div class="row">
+  <ul class="products products-index">
     <?php 
     
       $display_products_index = "";
@@ -22,7 +22,7 @@
       }
       echo $display_products_index;
    ?>
-  </div>
+  </ul>
 <!--/row-->
 </div>
 <!--/item-->
