@@ -59,13 +59,13 @@ include(ROOT_PATH . 'inc/header.php');
 			</div>
 
 			<div class="panel-body">
-				<div class="row">
+				<ul class="products">
 					<?php 					
 						foreach ($products as $product) {     
 							include(ROOT_PATH. 'inc/partial_products_list_view.html.php');      
   					} 
   				?>
-				</div>
+				</ul>
 			<?php include(ROOT_PATH . 'inc/partial_pagination.html.php'); ?>
 			</div>
 		</div>
